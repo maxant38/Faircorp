@@ -1,5 +1,6 @@
 package com.emse.spring.faircorp.dto;
 
+import com.emse.spring.faircorp.model.Building;
 import com.emse.spring.faircorp.model.Heater;
 import com.emse.spring.faircorp.model.Room;
 import com.emse.spring.faircorp.model.Window;
@@ -13,6 +14,8 @@ public class RoomDto {
     private Double target_temperature;
     private Set<Heater> heaters;
     private Set<Window> windows;
+    private Building building;
+    private int floor;
 
     //Constructors
     public RoomDto(){
@@ -26,6 +29,8 @@ public class RoomDto {
         this.target_temperature= room.getTarget_temperature();
         this.heaters=room.getHeaters();
         this.windows=room.getWindows();
+        this.building=room.getBuilding();
+        this.floor= room.getFloor();
     }
 
     //getters and setters
@@ -76,4 +81,12 @@ public class RoomDto {
     public void setWindows(Set<Window> windows) {
         this.windows = windows;
     }
+
+    public Building getBuilding() {return building;}
+
+    public void setBuilding(Building building) {this.building = building;}
+
+    public int getFloor() {return floor;}
+
+    public void setFloor(int floor) {this.floor = floor;}
 }

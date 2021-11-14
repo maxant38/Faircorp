@@ -1,28 +1,25 @@
-package com.emse.spring.faircorp.model;
+package com.emse.spring.faircorp.dto;
 
-import javax.persistence.*;
+import com.emse.spring.faircorp.model.Building;
+import com.emse.spring.faircorp.model.Room;
+
 import java.util.Set;
 
-@Entity //indicates that this class is an entity managed by hibernate
-@Table(name = "Building")
-public class Building {
-    @Id
-    @GeneratedValue
+public class BuildingDto {
     private Long id;
-
-    @Column(nullable = false, length = 255)
     private String name;
-
-    @OneToMany(mappedBy = "building")
     private Set<Room> rooms;
 
-    //constructor
-    public Building( String name ){
-
-        this.name = name;
-
+    //Constructors
+    public BuildingDto() {
     }
-    //Getters and setters
+
+    public BuildingDto (Building building){
+        this.id=building.getId();
+        this.name=building.getName();
+        this.rooms=building.getRooms();
+    }
+    //Getters and Setters
 
     public Long getId() {
         return id;

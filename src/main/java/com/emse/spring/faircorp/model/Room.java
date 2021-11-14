@@ -33,21 +33,34 @@ public class Room {
     @OneToMany(mappedBy = "room")
     private Set<Window> windows;
 
+    @ManyToOne
+    private Building building;
+
 
     //Constructors
 
 
-    public Room(String name, Double current_temperature, Double target_temperature, Set<Heater> heaters, Set<Window> windows) {
+    public Room(Building building,String name, Double current_temperature, Double target_temperature, Set<Heater> heaters, Set<Window> windows) {
         this.name = name;
         this.current_temperature = current_temperature;
         this.target_temperature = target_temperature;
         this.heaters = heaters;
         this.windows = windows;
+        this.building=building;
+    }
+
+    public Room(Building building,String name, Double current_temperature, Double target_temperature, int floor) {
+        this.name = name;
+        this.current_temperature = current_temperature;
+        this.target_temperature = target_temperature;
+        this.building=building;
+        this.floor=floor;
     }
 
     public  Room (){}
 
     //getters and setters
+
 
     public Long getId() {
         return id;
@@ -97,7 +110,19 @@ public class Room {
         this.windows = windows;
     }
 
+    public int getFloor() {
+        return floor;
+    }
 
+    public void setFloor(int floor) {
+        this.floor = floor;
+    }
 
+    public Building getBuilding() {
+        return building;
+    }
 
+    public void setBuilding(Building building) {
+        this.building = building;
+    }
 }
