@@ -7,7 +7,7 @@ import com.emse.spring.faircorp.model.Status;
 public class HeaterDto {
     private Long id;
     private String name;
-    private Room room;
+    private Long roomId;
     private Status heater_status;
 
     public HeaterDto(){
@@ -17,7 +17,7 @@ public class HeaterDto {
         this.id=heater.getId();
         this.name=heater.getName();
         this.heater_status=heater.getStatus();
-        this.room=heater.getRoom();
+        this.roomId=heater.getRoom().getId();
      }
 
 
@@ -41,12 +41,12 @@ public class HeaterDto {
         this.name = name;
     }
 
-    public Room getRoom() {
-        return room;
+    public Long getRoom() {
+        return roomId;
     }
 
-    public void setRoom(Room room) {
-        this.room = room;
+    public void setRoom(Long id) {
+        this.roomId = id;
     }
 
     public Status getHeater_status() {

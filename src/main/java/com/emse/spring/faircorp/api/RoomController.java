@@ -67,7 +67,7 @@ public class RoomController {
     public RoomDto create(@RequestBody RoomDto dto) {
 
         Room room = null;
-        Building building = buildingDao.getById(dto.getBuilding().getId());
+        Building building = buildingDao.getById(dto.getBuildingId());
         room = roomDao.save(new Room(building, dto.getName(), dto.getCurrent_temperature(), dto.getTarget_temperature(), dto.getFloor()));
 
         return new RoomDto(room);
