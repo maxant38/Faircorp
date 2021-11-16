@@ -9,12 +9,6 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface RoomDaoCustom {
-    @Query("select c from Room c where c.name=:name")  // (2)
-    Room findByName(@Param("name") String name);
-/*
-    List<Room> findName(String name);
-    List<Heater> findRoomHeaters(Long id);
-    List<Window> findRoomWindows(Long id);
-*/
-
+    //Find all rooms from a building specified by an id
+    List<Window> findRoomWindows(@Param("id") Long id);
 }

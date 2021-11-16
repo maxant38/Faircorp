@@ -82,4 +82,11 @@ public class RoomController {
 
         return new RoomDto(room);
     }
+
+    //find rooms in a building identified with its id
+    @GetMapping(path="/{id}/windows")
+    public List<WindowDto> findAllBuildingRooms(@PathVariable Long id) {
+        List<Window> windows= roomDao.findRoomWindows(id);
+        return windows.stream().map(WindowDto::new).collect(Collectors.toList());
+    }
     }
