@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 @CrossOrigin
 @RestController
 @RequestMapping("/api/buildings")
+@Transactional
 
 public class BuildingController {
     private final BuildingDao buildingDao;

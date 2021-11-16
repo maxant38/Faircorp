@@ -16,11 +16,13 @@ public class Building {
     @OneToMany(mappedBy = "building")
     private Set<Room> rooms;
 
-    //constructor
+    //constructors
     public Building( String name ){
 
         this.name = name;
 
+    }
+    public Building (){
     }
     //Getters and setters
 
