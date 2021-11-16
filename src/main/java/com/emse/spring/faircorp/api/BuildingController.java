@@ -52,6 +52,13 @@ public class BuildingController {
         return new BuildingDto(building);
 
     }
-
+    //find rooms in a building identified with its id
+    @GetMapping(path="/{id}/rooms")
+    public List<RoomDto> findAllBuildingRooms(@PathVariable Long id) {
+        List<Room> rooms= buildingDao.findBuildingRooms(id);
+        return rooms.stream().map(RoomDto::new).collect(Collectors.toList());
+    }
 }
+
+
 
