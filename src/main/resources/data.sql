@@ -8,3 +8,8 @@
     INSERT INTO RWINDOW(id, window_status, name, room_id) VALUES(-9, 'CLOSED', 'Window 2', -10);
     INSERT INTO RWINDOW(id, window_status, name, room_id) VALUES(-8, 'OPEN', 'Window 1', -9);
     INSERT INTO RWINDOW(id, window_status, name, room_id) VALUES(-7, 'CLOSED', 'Window 2', -9);
+
+    INSERT INTO BUILDING(id,name) VALUES(3,'Administration');
+    INSERT INTO BUILDING(id,name) VALUES(2,'Gymnase');
+    INSERT INTO BUILDING(id,name) VALUES(4,'Secrétariat');
+
