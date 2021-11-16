@@ -8,7 +8,6 @@ import java.util.Set;
 public class BuildingDto {
     private Long id;
     private String name;
-    private Set<Room> rooms;
 
     //Constructors
     public BuildingDto() {
@@ -17,7 +16,6 @@ public class BuildingDto {
     public BuildingDto (Building building){
         this.id=building.getId();
         this.name=building.getName();
-        this.rooms=building.getRooms();
     }
     //Getters and Setters
 
@@ -37,11 +35,4 @@ public class BuildingDto {
         this.name = name;
     }
 
-    public Set<Room> getRooms() {
-        return rooms;
-    }
-
-    public void setRooms(Set<Room> rooms) {
-        this.rooms = rooms;
-    }
-}
+  }
