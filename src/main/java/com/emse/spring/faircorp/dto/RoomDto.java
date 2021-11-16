@@ -17,6 +17,7 @@ public class RoomDto {
     private Long buildingId;
     private int floor;
 
+
     //Constructors
     public RoomDto(){
 
