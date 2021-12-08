@@ -21,14 +21,6 @@ This project is a building management tool that is monitoring windows and heater
 * [Clever Cloud](https://www.clever-cloud.com/)
 
 
-<!-- CONTACT -->
-## Contact
-
-Mathieu Delbos - mathieu.delbos@etu.emse.fr
-
-Project Link: [https://github.com/Mariano1Schloss/Faircorp](https://github.com/Mariano1Schloss/Faircorp)
-
-
 
 
 
